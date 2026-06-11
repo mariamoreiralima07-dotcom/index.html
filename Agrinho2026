@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Conexão Agro Sustentável | Agrinho 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
+/* RESET */
 *{
 margin:0;
 padding:0;
@@ -20,6 +17,7 @@ font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
+/* CORES */
 :root{
 --marrom1:#4e342e;
 --marrom2:#6d4c41;
@@ -31,6 +29,7 @@ scroll-behavior:smooth;
 --branco:#fff;
 }
 
+/* BODY */
 body{
 background:var(--bege);
 color:var(--texto);
@@ -39,7 +38,6 @@ line-height:1.8;
 }
 
 /* HEADER */
-
 header{
 position:fixed;
 width:100%;
@@ -48,25 +46,21 @@ z-index:1000;
 background:rgba(78,52,46,.95);
 padding:15px 8%;
 }
-
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
 }
-
 .logo{
 color:white;
 font-weight:700;
 font-size:1.4rem;
 }
-
 nav ul{
 display:flex;
 list-style:none;
 gap:25px;
 }
-
 nav a{
 color:white;
 text-decoration:none;
@@ -74,37 +68,31 @@ font-weight:600;
 }
 
 /* HERO */
-
 .hero{
 height:100vh;
-
 background:
 linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
 url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1920&q=80");
-
 background-size:cover;
 background-position:center;
-
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-
 padding:20px;
 color:white;
 }
-
 .hero h1{
-font-size:4rem;
+font-size:3rem;
 margin-bottom:20px;
+text-shadow:2px 2px 8px black;
 }
-
 .hero p{
-font-size:1.4rem;
+font-size:1.3rem;
 max-width:900px;
 margin:auto;
+text-shadow:1px 1px 6px black;
 }
-
 .btn{
 display:inline-block;
 margin-top:30px;
@@ -116,31 +104,26 @@ border-radius:50px;
 font-weight:700;
 transition:.4s;
 }
-
 .btn:hover{
 background:var(--verde2);
 transform:translateY(-5px);
 }
 
 /* SEÇÕES */
-
 section{
 padding:100px 10%;
 }
-
 .titulo{
 text-align:center;
-font-size:2.8rem;
+font-size:2.5rem;
 margin-bottom:30px;
 color:var(--marrom1);
 }
-
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
-
 .card{
 background:white;
 padding:30px;
@@ -148,24 +131,20 @@ border-radius:20px;
 box-shadow:0 10px 25px rgba(0,0,0,.1);
 transition:.4s;
 }
-
 .card:hover{
 transform:translateY(-10px);
 }
-
 .card h3{
 color:var(--verde);
 margin-bottom:15px;
 }
 
 /* GALERIA */
-
 .galeria{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:20px;
 }
-
 .galeria img{
 width:100%;
 height:250px;
@@ -173,20 +152,17 @@ object-fit:cover;
 border-radius:20px;
 transition:.4s;
 }
-
 .galeria img:hover{
 transform:scale(1.05);
 }
 
 /* EMOJIS */
-
 .area-curtidas{
 text-align:center;
 background:white;
 padding:40px;
 border-radius:20px;
 }
-
 .emojis{
 display:flex;
 justify-content:center;
@@ -194,17 +170,14 @@ gap:20px;
 flex-wrap:wrap;
 margin-top:20px;
 }
-
 .emoji{
 font-size:3rem;
 cursor:pointer;
 transition:.3s;
 }
-
 .emoji:hover{
 transform:scale(1.3);
 }
-
 .contador{
 margin-top:20px;
 font-size:1.4rem;
@@ -213,7 +186,6 @@ color:var(--marrom1);
 }
 
 /* AUTORA */
-
 .autora{
 background:var(--marrom1);
 color:white;
@@ -221,13 +193,12 @@ text-align:center;
 padding:60px;
 border-radius:20px;
 }
-
 .autora h2{
-font-size:2.5rem;
+font-size:2.2rem;
+margin-bottom:10px;
 }
 
 /* FOOTER */
-
 footer{
 background:#2b1b17;
 color:white;
@@ -236,196 +207,112 @@ padding:40px;
 }
 
 @media(max-width:768px){
-
 .hero h1{
-font-size:2.5rem;
+font-size:2rem;
 }
-
 body{
 font-size:18px;
 }
-
 }
-
 </style>
-
 </head>
-
 <body>
 
 <header>
-
 <nav>
-
 <div class="logo">🌱 AGRINHO 2026</div>
-
 <ul>
 <li><a href="#sobre">Projeto</a></li>
 <li><a href="#problema">Problema</a></li>
 <li><a href="#agro">Agro PR</a></li>
 <li><a href="#interacao">Interação</a></li>
 </ul>
-
 </nav>
-
 </header>
 
 <section class="hero">
-
 <div>
-
 <h1>CONEXÃO AGRO SUSTENTÁVEL</h1>
-
-<p>
-
-Agro Forte, Tecnologia e Sustentabilidade.
-Valorizando o agro do Norte do Paraná e aproximando estudantes do futuro do campo.
-
-</p>
-
+<p>Agro Forte, Tecnologia e Sustentabilidade. Valorizando o agro do Norte do Paraná e aproximando estudantes do futuro do campo.</p>
 <a href="#sobre" class="btn">Conhecer Projeto</a>
-
 </div>
-
 </section>
 
 <section id="sobre">
-
 <h2 class="titulo">Apresentação do Projeto</h2>
-
 <div class="cards">
-
 <div class="card">
 <h3>🌱 Objetivo</h3>
 <p>Mostrar que tecnologia e sustentabilidade podem caminhar juntas.</p>
 </div>
-
 <div class="card">
 <h3>📚 Educação</h3>
 <p>Levar conhecimento acessível para estudantes e comunidade.</p>
 </div>
-
 <div class="card">
 <h3>🚜 Inovação</h3>
 <p>Apresentar tecnologias verdes aplicadas ao campo.</p>
 </div>
-
 </div>
-
 </section>
 
 <section id="problema">
-
 <h2 class="titulo">Problema Identificado</h2>
-
 <div class="cards">
-
 <div class="card">
 <h3>❌ Falta de Informação</h3>
 <p>Muitos jovens desconhecem as tecnologias sustentáveis existentes.</p>
 </div>
-
 <div class="card">
 <h3>❌ Custos Elevados</h3>
 <p>Produtores enfrentam desafios econômicos para modernização.</p>
 </div>
-
 <div class="card">
 <h3>❌ Recursos Naturais</h3>
 <p>Uso inadequado da água e do solo gera desperdícios.</p>
 </div>
-
 </div>
-
 </section>
 
 <section id="agro">
-
 <h2 class="titulo">Agro do Norte do Paraná</h2>
-
 <div class="galeria">
-
 <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1000&q=80" alt="Plantação">
-
 <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80" alt="Lavoura">
-
 <img src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?auto=format&fit=crop&w=1000&q=80" alt="Agricultura">
-
 <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1000&q=80" alt="Campo">
-
 </div>
-
 </section>
 
 <section id="interacao">
-
 <h2 class="titulo">O que você achou do projeto?</h2>
-
 <div class="area-curtidas">
-
 <div class="emojis">
-
 <div class="emoji">👍</div>
 <div class="emoji">❤️</div>
 <div class="emoji">🌱</div>
 <div class="emoji">☕</div>
 <div class="emoji">🚜</div>
-
 </div>
-
 <div class="contador">
 Curtidas: <span id="likes">0</span>
 </div>
-
 </div>
-
 </section>
 
 <section class="autora">
-
 <h2>Maria Vitória</h2>
-
-<p>
-1º Ano A<br>
-Colégio Leonardo Francisco Nogueira<br>
-Pinhalão - Paraná
-</p>
-
+<p>1º Ano A<br>Colégio Leonardo Francisco Nogueira<br>Pinhalão - Paraná</p>
 </section>
 
 <footer>
-
-<p>
-Projeto Agrinho 2026 • Conexão Agro Sustentável
-</p>
-
+<p>Projeto Agrinho 2026 • Conexão Agro Sustentável</p>
 </footer>
 
 <script>
-
 let likes = 0;
-
 document.querySelectorAll(".emoji").forEach(emoji=>{
-
-emoji.addEventListener("click",()=>{
-
-likes++;
-
-document.getElementById("likes").textContent = likes;
-
-emoji.animate([
-{transform:'scale(1)'},
-{transform:'scale(1.4)'},
-{transform:'scale(1)'}
-],{
-duration:300
-});
-
-});
-
-});
-
-</script>
-
-</body>
-</html>
+  emoji.addEventListener("click",()=>{
+    likes++;
+    document.getElementById("likes").textContent = likes;
+    emoji.animate([{transform:'scale(1)'},{transform
