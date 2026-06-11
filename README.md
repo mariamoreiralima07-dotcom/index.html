@@ -1,234 +1,460 @@
-# 🌱 Agrinho 2026 - Conexão Agro Sustentável
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-## 📖 Sobre o Projeto
+<title>Conexão Agro Sustentável | Agrinho 2026</title>
 
-O projeto "Conexão Agro Sustentável" foi desenvolvido para o Programa Agrinho 2026 com o objetivo de aproximar estudantes das tecnologias sustentáveis aplicadas ao agronegócio.
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-O site apresenta informações sobre:
+<style>
 
-- Agro de Alta Performance
-- Agro Forte
-- Sustentabilidade no Campo
-- Tecnologias Verdes
-- Casos de Sucesso
-- Agricultura Sustentável
-- Produção de Café
-- Democratização do Acesso à Tecnologia
-
----
-
-## 👩‍🎓 Desenvolvido por
-
-**Maria Vitória**  
-**1º Ano A**  
-**Colégio Leonardo Francisco Nogueira**  
-**Pinhalão - Paraná**
-
----
-
-# 🏗 Estrutura do Projeto
-
-```
-agrinho2026/
-│
-├── index.html
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── script.js
-│
-├── img/
-│   ├── fundo-cafe.jpg
-│   ├── cafe01.jpg
-│   ├── cafe02.jpg
-│   ├── cafe03.jpg
-│   └── cafe04.jpg
-│
-└── README.md
-```
-
----
-
-# 📄 HTML
-
-O arquivo HTML contém:
-
-## Header
-
-- Nome do projeto
-- Menu de navegação
-
-## Hero
-
-- Imagem principal da fazenda de café
-- Título do projeto
-- Subtítulo
-- Botão de ação
-
-## Sobre o Projeto
-
-- Objetivos
-- Público-alvo
-- Benefícios
-
-## Problema Identificado
-
-- Falta de informação acessível
-- Alto custo das tecnologias
-- Desperdício de recursos naturais
-
-## Soluções
-
-- Agricultura de Precisão
-- Irrigação Inteligente
-- Energia Solar
-- Sensores e Drones
-
-## Casos de Sucesso
-
-- Exemplos reais
-- Resultados sustentáveis
-
-## Galeria
-
-- Imagens da fazenda
-- Produção de café
-- Tecnologias sustentáveis
-
-## Rodapé
-
-- Créditos
-- Escola
-- Projeto Agrinho 2026
-
----
-
-# 🎨 CSS
-
-Paleta de cores inspirada na natureza.
-
-## Cores Principais
-
-```css
-:root{
---verde:#2e7d32;
---verde-claro:#4caf50;
---marrom:#6d4c41;
---marrom-escuro:#4e342e;
---bege:#f5f0e6;
---branco:#ffffff;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
-```
 
-## Estilo Visual
+:root{
+--marrom:#4E342E;
+--marrom-claro:#6D4C41;
+--vermelho:#C62828;
+--amarelo:#F9A825;
+--creme:#FFF8E1;
+--texto:#212121;
+--branco:#FFFFFF;
+}
 
-- Design moderno
-- Estilo orgânico
-- Tons de café
-- Alto contraste
-- Acessibilidade para baixa visão
-- Layout responsivo
+body{
+background:var(--creme);
+color:var(--texto);
+line-height:1.8;
+font-size:20px;
+}
 
-## Efeitos
+/* MENU */
 
-- Hover nos botões
-- Hover nas imagens
-- Sombras suaves
-- Transições animadas
-- Cards interativos
+header{
+position:fixed;
+top:0;
+width:100%;
+z-index:999;
+background:rgba(78,52,46,.95);
+backdrop-filter:blur(10px);
+}
 
----
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+}
 
-# ⚙️ JavaScript
+.logo{
+color:white;
+font-weight:800;
+font-size:1.4rem;
+}
 
-O JavaScript adiciona interatividade.
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
 
-## Funcionalidades
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
 
-### Curtidas
+nav a:hover{
+color:var(--amarelo);
+}
 
-```javascript
+/* CAPA */
+
+.hero{
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+padding:20px;
+color:white;
+}
+
+.hero-content{
+max-width:1000px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.3rem;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 35px;
+background:var(--amarelo);
+color:black;
+font-weight:700;
+border-radius:50px;
+text-decoration:none;
+transition:.4s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+background:#ffd54f;
+}
+
+/* SEÇÕES */
+
+section{
+padding:100px 10%;
+}
+
+.titulo{
+text-align:center;
+font-size:2.8rem;
+margin-bottom:30px;
+color:var(--marrom);
+}
+
+.texto{
+max-width:1000px;
+margin:auto;
+text-align:center;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+color:var(--vermelho);
+margin-bottom:10px;
+}
+
+/* GALERIA */
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.galeria img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:20px;
+transition:.4s;
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.galeria img:hover{
+transform:scale(1.05);
+}
+
+/* CURTIDAS */
+
+.interacao{
+background:white;
+padding:50px;
+border-radius:20px;
+text-align:center;
+}
+
+.emojis{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.emoji{
+font-size:3rem;
+cursor:pointer;
+transition:.3s;
+}
+
+.emoji:hover{
+transform:scale(1.3);
+}
+
+.likes{
+margin-top:20px;
+font-size:1.4rem;
+font-weight:bold;
+color:var(--vermelho);
+}
+
+/* AUTORIA */
+
+.autora{
+background:linear-gradient(135deg,var(--marrom),var(--vermelho));
+color:white;
+text-align:center;
+padding:70px;
+border-radius:25px;
+}
+
+.autora h2{
+font-size:3rem;
+margin-bottom:10px;
+}
+
+/* RODAPÉ */
+
+footer{
+background:#2b1b17;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+body{
+font-size:18px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">🌾 AGRINHO 2026</div>
+
+<ul>
+<li><a href="#projeto">Projeto</a></li>
+<li><a href="#problema">Problema</a></li>
+<li><a href="#agro">Agro</a></li>
+<li><a href="#interacao">Interação</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>CONEXÃO AGRO SUSTENTÁVEL</h1>
+
+<p>
+Valorizando o Agro Forte do Norte do Paraná através da tecnologia,
+da inovação e da sustentabilidade.
+</p>
+
+<a href="#projeto" class="btn">
+Conhecer Projeto
+</a>
+
+</div>
+
+</section>
+
+<section id="projeto">
+
+<h2 class="titulo">Apresentação do Projeto</h2>
+
+<p class="texto">
+Este projeto foi criado para mostrar que tecnologia e sustentabilidade
+podem caminhar juntas. Através da inovação, o campo produz mais,
+preserva recursos naturais e fortalece o futuro das próximas gerações.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌱 Sustentabilidade</h3>
+<p>Uso consciente da água, do solo e dos recursos naturais.</p>
+</div>
+
+<div class="card">
+<h3>🚜 Agro Forte</h3>
+<p>Produtividade com responsabilidade ambiental.</p>
+</div>
+
+<div class="card">
+<h3>📱 Tecnologia</h3>
+<p>Drones, sensores e agricultura de precisão.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="problema">
+
+<h2 class="titulo">Problema Identificado</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>❌ Falta de Informação</h3>
+<p>Muitas pessoas desconhecem as tecnologias sustentáveis disponíveis.</p>
+</div>
+
+<div class="card">
+<h3>❌ Custos Elevados</h3>
+<p>Pequenos produtores enfrentam dificuldades para inovar.</p>
+</div>
+
+<div class="card">
+<h3>❌ Recursos Naturais</h3>
+<p>O desperdício ameaça a sustentabilidade da produção.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="agro">
+
+<h2 class="titulo">Agro do Norte do Paraná</h2>
+
+<div class="galeria">
+
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80" alt="Lavoura">
+
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" alt="Agricultura">
+
+<img src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?auto=format&fit=crop&w=1200&q=80" alt="Campo">
+
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80" alt="Produção agrícola">
+
+</div>
+
+</section>
+
+<section id="interacao">
+
+<h2 class="titulo">Gostou do Projeto?</h2>
+
+<div class="interacao">
+
+<p>Clique nos emojis e deixe sua reação.</p>
+
+<div class="emojis">
+
+<div class="emoji">❤️</div>
+<div class="emoji">🌱</div>
+<div class="emoji">☕</div>
+<div class="emoji">🚜</div>
+<div class="emoji">🌾</div>
+
+</div>
+
+<div class="likes">
+Curtidas: <span id="contador">0</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="autora">
+
+<h2>Maria Vitória</h2>
+
+<p>
+1º Ano A<br>
+Colégio Leonardo Francisco Nogueira<br>
+Pinhalão - Paraná
+</p>
+
+</section>
+
+<footer>
+
+<p>
+Projeto Agrinho 2026 • Conexão Agro Sustentável
+</p>
+
+</footer>
+
+<script>
+
 let curtidas = 0;
 
-function curtir(){
+document.querySelectorAll('.emoji').forEach(item=>{
+
+item.addEventListener('click',()=>{
+
 curtidas++;
-}
-```
 
-### Emojis Interativos
+document.getElementById('contador').innerText = curtidas;
 
-- 👍 Gostei
-- ❤️ Favorito
-- 🌱 Sustentável
-- ☕ Café
-
-### Animação ao Rolar
-
-```javascript
-window.addEventListener('scroll',()=>{
-// animações
+item.animate([
+{transform:'scale(1)'},
+{transform:'scale(1.4)'},
+{transform:'scale(1)'}
+],{
+duration:300
 });
-```
 
-### Botão Voltar ao Topo
-
-```javascript
-window.scrollTo({
-top:0,
-behavior:'smooth'
 });
-```
 
----
+});
 
-# 🌎 Objetivo Social
+</script>
 
-O site busca demonstrar que:
-
-- Tecnologia e sustentabilidade podem caminhar juntas.
-- O agro moderno utiliza recursos naturais de forma inteligente.
-- A informação deve ser acessível para todos.
-- Os estudantes podem conhecer soluções inovadoras para o campo.
-
----
-
-# 📱 Responsividade
-
-O projeto é compatível com:
-
-- Computadores
-- Notebooks
-- Tablets
-- Smartphones
-
----
-
-# ♿ Acessibilidade
-
-Recursos implementados:
-
-- Alto contraste
-- Fontes maiores
-- Textos legíveis
-- Imagens com atributo ALT
-- Navegação simples
-
----
-
-# 🚀 Tecnologias Utilizadas
-
-- HTML5
-- CSS3
-- JavaScript
-- Google Fonts
-- Design Responsivo
-
----
-
-# 🌱 Tema Agrinho 2026
-
-**Conexão Agro Sustentável**
-
-**Agro Forte + Tecnologia + Sustentabilidade + Educação**
+</body>
+</html>
 
