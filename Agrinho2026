@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Conexão Agro Sustentável | Agrinho 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-/* RESET */
+
 *{
 margin:0;
 padding:0;
@@ -17,152 +18,190 @@ font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
-/* CORES */
 :root{
---marrom1:#4e342e;
---marrom2:#6d4c41;
---marrom3:#8d6e63;
---bege:#f5f0e6;
---verde:#2e7d32;
---verde2:#4caf50;
---texto:#111;
---branco:#fff;
+--marrom:#4E342E;
+--marrom-claro:#6D4C41;
+--vermelho:#C62828;
+--amarelo:#F9A825;
+--creme:#FFF8E1;
+--texto:#212121;
+--branco:#FFFFFF;
 }
 
-/* BODY */
 body{
-background:var(--bege);
+background:var(--creme);
 color:var(--texto);
-font-size:20px;
 line-height:1.8;
+font-size:20px;
 }
 
-/* HEADER */
+/* MENU */
+
 header{
 position:fixed;
-width:100%;
 top:0;
-z-index:1000;
+width:100%;
+z-index:999;
 background:rgba(78,52,46,.95);
-padding:15px 8%;
+backdrop-filter:blur(10px);
 }
+
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:15px 8%;
 }
+
 .logo{
 color:white;
-font-weight:700;
+font-weight:800;
 font-size:1.4rem;
 }
+
 nav ul{
 display:flex;
-list-style:none;
 gap:25px;
+list-style:none;
 }
+
 nav a{
 color:white;
 text-decoration:none;
 font-weight:600;
 }
 
-/* HERO */
+nav a:hover{
+color:var(--amarelo);
+}
+
+/* CAPA */
+
 .hero{
 height:100vh;
+
 background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
-url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1920&q=80");
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80');
+
 background-size:cover;
 background-position:center;
+
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
+
 padding:20px;
 color:white;
 }
-.hero h1{
-font-size:3rem;
-margin-bottom:20px;
-text-shadow:2px 2px 8px black;
+
+.hero-content{
+max-width:1000px;
 }
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
 .hero p{
 font-size:1.3rem;
-max-width:900px;
-margin:auto;
-text-shadow:1px 1px 6px black;
+margin-bottom:30px;
 }
+
 .btn{
 display:inline-block;
-margin-top:30px;
-padding:15px 35px;
-background:var(--verde);
-color:white;
-text-decoration:none;
-border-radius:50px;
+padding:16px 35px;
+background:var(--amarelo);
+color:black;
 font-weight:700;
+border-radius:50px;
+text-decoration:none;
 transition:.4s;
 }
+
 .btn:hover{
-background:var(--verde2);
 transform:translateY(-5px);
+background:#ffd54f;
 }
 
 /* SEÇÕES */
+
 section{
 padding:100px 10%;
 }
+
 .titulo{
 text-align:center;
-font-size:2.5rem;
+font-size:2.8rem;
 margin-bottom:30px;
-color:var(--marrom1);
+color:var(--marrom);
 }
+
+.texto{
+max-width:1000px;
+margin:auto;
+text-align:center;
+}
+
+/* CARDS */
+
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
+margin-top:40px;
 }
+
 .card{
 background:white;
 padding:30px;
 border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.1);
+box-shadow:0 10px 20px rgba(0,0,0,.1);
 transition:.4s;
 }
+
 .card:hover{
 transform:translateY(-10px);
 }
+
 .card h3{
-color:var(--verde);
-margin-bottom:15px;
+color:var(--vermelho);
+margin-bottom:10px;
 }
 
 /* GALERIA */
+
 .galeria{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:20px;
+margin-top:40px;
 }
+
 .galeria img{
 width:100%;
-height:250px;
+height:260px;
 object-fit:cover;
 border-radius:20px;
 transition:.4s;
+box-shadow:0 8px 20px rgba(0,0,0,.2);
 }
+
 .galeria img:hover{
 transform:scale(1.05);
 }
 
-/* EMOJIS */
-.area-curtidas{
-text-align:center;
+/* CURTIDAS */
+
+.interacao{
 background:white;
-padding:40px;
+padding:50px;
 border-radius:20px;
+text-align:center;
 }
+
 .emojis{
 display:flex;
 justify-content:center;
@@ -170,35 +209,41 @@ gap:20px;
 flex-wrap:wrap;
 margin-top:20px;
 }
+
 .emoji{
 font-size:3rem;
 cursor:pointer;
 transition:.3s;
 }
+
 .emoji:hover{
 transform:scale(1.3);
 }
-.contador{
+
+.likes{
 margin-top:20px;
 font-size:1.4rem;
 font-weight:bold;
-color:var(--marrom1);
+color:var(--vermelho);
 }
 
-/* AUTORA */
+/* AUTORIA */
+
 .autora{
-background:var(--marrom1);
+background:linear-gradient(135deg,var(--marrom),var(--vermelho));
 color:white;
 text-align:center;
-padding:60px;
-border-radius:20px;
+padding:70px;
+border-radius:25px;
 }
+
 .autora h2{
-font-size:2.2rem;
+font-size:3rem;
 margin-bottom:10px;
 }
 
-/* FOOTER */
+/* RODAPÉ */
+
 footer{
 background:#2b1b17;
 color:white;
@@ -206,113 +251,209 @@ text-align:center;
 padding:40px;
 }
 
+/* RESPONSIVO */
+
 @media(max-width:768px){
+
 .hero h1{
-font-size:2rem;
+font-size:2.5rem;
 }
+
 body{
 font-size:18px;
 }
+
+nav ul{
+display:none;
 }
+
+}
+
 </style>
 </head>
 <body>
 
 <header>
+
 <nav>
-<div class="logo">🌱 AGRINHO 2026</div>
+
+<div class="logo">🌾 AGRINHO 2026</div>
+
 <ul>
-<li><a href="#sobre">Projeto</a></li>
+<li><a href="#projeto">Projeto</a></li>
 <li><a href="#problema">Problema</a></li>
-<li><a href="#agro">Agro PR</a></li>
+<li><a href="#agro">Agro</a></li>
 <li><a href="#interacao">Interação</a></li>
 </ul>
+
 </nav>
+
 </header>
 
 <section class="hero">
-<div>
+
+<div class="hero-content">
+
 <h1>CONEXÃO AGRO SUSTENTÁVEL</h1>
-<p>Agro Forte, Tecnologia e Sustentabilidade. Valorizando o agro do Norte do Paraná e aproximando estudantes do futuro do campo.</p>
-<a href="#sobre" class="btn">Conhecer Projeto</a>
+
+<p>
+Valorizando o Agro Forte do Norte do Paraná através da tecnologia,
+da inovação e da sustentabilidade.
+</p>
+
+<a href="#projeto" class="btn">
+Conhecer Projeto
+</a>
+
 </div>
+
 </section>
 
-<section id="sobre">
+<section id="projeto">
+
 <h2 class="titulo">Apresentação do Projeto</h2>
+
+<p class="texto">
+Este projeto foi criado para mostrar que tecnologia e sustentabilidade
+podem caminhar juntas. Através da inovação, o campo produz mais,
+preserva recursos naturais e fortalece o futuro das próximas gerações.
+</p>
+
 <div class="cards">
+
 <div class="card">
-<h3>🌱 Objetivo</h3>
-<p>Mostrar que tecnologia e sustentabilidade podem caminhar juntas.</p>
+<h3>🌱 Sustentabilidade</h3>
+<p>Uso consciente da água, do solo e dos recursos naturais.</p>
 </div>
+
 <div class="card">
-<h3>📚 Educação</h3>
-<p>Levar conhecimento acessível para estudantes e comunidade.</p>
+<h3>🚜 Agro Forte</h3>
+<p>Produtividade com responsabilidade ambiental.</p>
 </div>
+
 <div class="card">
-<h3>🚜 Inovação</h3>
-<p>Apresentar tecnologias verdes aplicadas ao campo.</p>
+<h3>📱 Tecnologia</h3>
+<p>Drones, sensores e agricultura de precisão.</p>
 </div>
+
 </div>
+
 </section>
 
 <section id="problema">
+
 <h2 class="titulo">Problema Identificado</h2>
+
 <div class="cards">
+
 <div class="card">
 <h3>❌ Falta de Informação</h3>
-<p>Muitos jovens desconhecem as tecnologias sustentáveis existentes.</p>
+<p>Muitas pessoas desconhecem as tecnologias sustentáveis disponíveis.</p>
 </div>
+
 <div class="card">
 <h3>❌ Custos Elevados</h3>
-<p>Produtores enfrentam desafios econômicos para modernização.</p>
+<p>Pequenos produtores enfrentam dificuldades para inovar.</p>
 </div>
+
 <div class="card">
 <h3>❌ Recursos Naturais</h3>
-<p>Uso inadequado da água e do solo gera desperdícios.</p>
+<p>O desperdício ameaça a sustentabilidade da produção.</p>
 </div>
+
 </div>
+
 </section>
 
 <section id="agro">
+
 <h2 class="titulo">Agro do Norte do Paraná</h2>
+
 <div class="galeria">
-<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1000&q=80" alt="Plantação">
-<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80" alt="Lavoura">
-<img src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?auto=format&fit=crop&w=1000&q=80" alt="Agricultura">
-<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1000&q=80" alt="Campo">
+
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80" alt="Lavoura">
+
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" alt="Agricultura">
+
+<img src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?auto=format&fit=crop&w=1200&q=80" alt="Campo">
+
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80" alt="Produção agrícola">
+
 </div>
+
 </section>
 
 <section id="interacao">
-<h2 class="titulo">O que você achou do projeto?</h2>
-<div class="area-curtidas">
+
+<h2 class="titulo">Gostou do Projeto?</h2>
+
+<div class="interacao">
+
+<p>Clique nos emojis e deixe sua reação.</p>
+
 <div class="emojis">
-<div class="emoji">👍</div>
+
 <div class="emoji">❤️</div>
 <div class="emoji">🌱</div>
 <div class="emoji">☕</div>
 <div class="emoji">🚜</div>
+<div class="emoji">🌾</div>
+
 </div>
-<div class="contador">
-Curtidas: <span id="likes">0</span>
+
+<div class="likes">
+Curtidas: <span id="contador">0</span>
 </div>
+
 </div>
+
 </section>
 
 <section class="autora">
+
 <h2>Maria Vitória</h2>
-<p>1º Ano A<br>Colégio Leonardo Francisco Nogueira<br>Pinhalão - Paraná</p>
+
+<p>
+1º Ano A<br>
+Colégio Leonardo Francisco Nogueira<br>
+Pinhalão - Paraná
+</p>
+
 </section>
 
 <footer>
-<p>Projeto Agrinho 2026 • Conexão Agro Sustentável</p>
+
+<p>
+Projeto Agrinho 2026 • Conexão Agro Sustentável
+</p>
+
 </footer>
 
 <script>
-let likes = 0;
-document.querySelectorAll(".emoji").forEach(emoji=>{
-  emoji.addEventListener("click",()=>{
-    likes++;
-    document.getElementById("likes").textContent = likes;
-    emoji.animate([{transform:'scale(1)'},{transform
+
+let curtidas = 0;
+
+document.querySelectorAll('.emoji').forEach(item=>{
+
+item.addEventListener('click',()=>{
+
+curtidas++;
+
+document.getElementById('contador').innerText = curtidas;
+
+item.animate([
+{transform:'scale(1)'},
+{transform:'scale(1.4)'},
+{transform:'scale(1)'}
+],{
+duration:300
+});
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
